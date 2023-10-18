@@ -17,6 +17,12 @@ def main():
             if game.check_answer(user_answer):
                 print("Правильно!")
                 game.score += 1
+
+                # Проверка на 15 очков
+                if game.score == 15:
+                    print("Поздравляем! Вы набрали 15 очков и выиграли миллион!")
+                    break
+
             else:
                 print(
                     f"Неверно! Правильный ответ: {game.current_question.options[game.current_question.correct_answer]}")
